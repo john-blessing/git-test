@@ -1,0 +1,11 @@
+node_modules
+*.pyc
+__pycache__
+.idea
+.vscode
+nohup.out
+hlines
+.vscode
+logs
+venv
+dist
