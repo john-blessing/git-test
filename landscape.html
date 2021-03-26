@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style type="text/css">
+
+        #main {
+            /*width: 560px;*/
+            /*height: 320px;*/
+            overflow-y: scroll;
+            /*overflow-x: hidden;*/
+        }
+
+        @media screen and (orientation: portrait) {
+
+            #main {
+                position: absolute;
+                width: 100vh;
+                height: 100vw;
+                top: 0;
+                left: 100vw;
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                transform-origin: 0% 0%;
+            }
+        }
+
+        @media screen and (orientation: landscape) {
+            #main {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+        }
+
+        .box {
+            width: 2400px;
+            height: 100%;
+            background-color: antiquewhite;
+        }
+
+        .box1 {
+            width: 400px;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: aqua;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+<body>
+<div id="main">
+    <div class="box">
+        <div class="box1"
+             style="background-image: url('https://lh3.googleusercontent.com/proxy/SYwxmqGk_pnQF7VkweSKUb4Cd-6nO8mEkJQ-YlokgPIT8tyLjuGt9wSN6fSqwmJX7AVfFBSnltO8YgWcKAXdKG9STkT8NWq3baxQ9n6myHgxEpnGA_Hl')">
+        </div>
+        <div class="box1"
+             style="background-image: url('https://game.gtimg.cn/images/yxzj/coming/m/heros/image/20180116/62a33765cea936984e50bdd0cb878b8e.jpg')"
+        ></div>
+        <div class="box1"
+             style="background-image: url('https://p1.nanmuxuan.com/images/7e/16ca048cc60faaa0.jpg')"
+        ></div>
+        <div class="box1"
+             style="background-image: url('https://inews.gtimg.com/newsapp_bt/0/10677943669/1000')"
+        ></div>
+        <div class="box1"
+             style="background-image: url('https://game.gtimg.cn/images/yxzj/coming/m/heros/image/20180316/4a7f2afa7476c51f7cf66adc8822c569.jpg')"
+        ></div>
+        <div class="box1"
+             style="background-image: url('https://lh3.googleusercontent.com/proxy/peGbm8SlwaQEe_6aN9jIJIdVtKKRROnkICzvGG4Sda9XVrvxuiDNaDfjYAhFHuhdWFvIw3D0q8pKIMuMQdTeZYdC-tAvMi8VGumc7iRCohtHhKbmWkE_lg')"
+        ></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" language="javascript" src="./vconsole.min.js"></script>
+</body>
+</html>
