@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-08-31 21:49:00
- * @LastEditTime: 2021-08-31 21:52:39
+ * @LastEditTime: 2021-08-31 21:54:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /git-test/release.js
@@ -91,7 +91,6 @@ async function push() {
   timeLog('推送代码至git仓库', 'start');
   await run('git add -A');
   const { word } = await commit();
-  console.log(word)
   await run(`git commit -m ${word}`);
   await run('git push origin');
   timeLog('推送代码至git仓库', 'end');
