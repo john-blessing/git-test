@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="createUuid()">生成uuid7777</button>
+<script>
+    let uuid = localStorage.getItem('uuid');
+
+    function _uuid() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+        }
+
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
+    }
+
+    function createUuid() {
+        uuid = _uuid()
+        localStorage.setItem('uuid', uuid);
+    }
+
+    window.addEventListener("storage", function (e) {
+        if (!e.newValue) {
+            localStorage.setItem('uuid', uuid);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,1 +1,15 @@
+<<<<<<< HEAD
 .idea
+=======
+node_modules
+*.pyc
+__pycache__
+.idea
+.vscode
+nohup.out
+hlines
+.vscode
+logs
+venv
+dist
+>>>>>>> 234eb0fe76fc3d4aed7b38a87649219cfbfa3150

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>test</h1>
+    <script type="text/javascript">
+    class MyStorage {
+        get(key) {
+            const wrapValue = localStorage.getItem(key)
+            if (wrapValue == null) {
+                return undefined
+            }
+
+            const { value, expires } = JSON.parse(wrapValue)
+            if (!expires || Date.now() < expires) {
+                return value
+            }
+            localStorage.removeItem(key)
+            return undefined
+        }
+
+        set(key, value, period) {
+            const wrapValue = { value };
+            if (period != null) {
+                wrapValue.expires = Date.now() + period;
+            }
+
+            localStorage.setItem(key, JSON.stringify(wrapValue));
+        }
+    }
+    const store = new MyStorage();
+
+    store.set('name', 'tom', 5000)
+
+    setTimeout(() => {
+        console.log(store.get('name'))
+    }, 6000)
+    </script>
+</body>
+
+</html>
