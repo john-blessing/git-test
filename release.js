@@ -1,7 +1,7 @@
 /*
- * @Author: your name
+ * @Author: jjf
  * @Date: 2021-08-31 21:49:00
- * @LastEditTime: 2021-08-31 21:54:18
+ * @LastEditTime: 2021-08-31 22:00:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /git-test/release.js
@@ -37,7 +37,7 @@ const getNextVersions = () => ({
   premajor: semverInc(currentVersion, 'premajor'),
   preminor: semverInc(currentVersion, 'preminor'),
   prepatch: semverInc(currentVersion, 'prepatch'),
-  prerelease: semverInc(currentVersion, 'prerelease')
+  prerelease: semverInc(currentVersion + '-beta', 'prerelease')
 });
 
 const timeLog = (logInfo, type) => {
@@ -144,14 +144,12 @@ async function main() {
   try {
     const nextVersion = await prompt();
     const startTime = Date.now();
-    // =================== 组件库打包 ===================
+    // =================== 接口打包 ===================
     // await build();
     // =================== 更新版本号 ===================
     await updateVersion(nextVersion);
     // =================== 发布至npm ===================
     // await publish();
-    // =================== 更新changelog ===================
-    // await generateChangelog();
     // =================== 代码推送git仓库 ===================
     await push(nextVersion);
     // =================== 打tag并推送至git ===================
